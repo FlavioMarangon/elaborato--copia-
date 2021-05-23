@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap'); /*Font Google*/
+@import url(hover.css); /*Importo qui il css delle animazioni per non importarlo su tutte le altre pagine*/
+
+/* Variabili globali */
+:root {
+    /* Colori */
+    --whitetext: white;
+    --accent: #12263A; 
+    --actions: #E69508;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: var(--accent);
+    color: var(--whitetext);
+    padding: 0;
+    height: max-content
+}
+
+header a {
+    color: var(--whitetext);
+}
+
+.sfondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header5.jpg");
+    background-size: cover;
+}
+
+/* NAVBAR */
+#navigazione {
+    background-color: var(--accent);
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+#logo {
+    padding: 0%;
+    height: 60px;
+    vertical-align: middle;
+}
+
+/* utilizzo flexbox per creare uno spazio vuoto flessibile con la larghezza
+della pagina */
+#whitespace {
+    display: flex;
+    flex-grow: 1;    
+}
+
+/* TITOLO */
+#titolo {
+    width: fit-content;
+    padding-left: 2%;
+    padding-bottom: 2rem;
+    margin: 0;
+}
+
+#titolo h1 {
+    width: fit-content;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+#titolo h2 {
+    width: 50%;
+    text-align: justify;
+}
+
+/* Bottoni titolo */
+#titolo a {
+    display: inline-block;
+    background-color: var(--actions);
+    padding: 1rem;
+    margin: 0.3rem;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+
+/* FORM LOGIN / REGISTRAZIONE */ 
+.centravert {
+    flex-direction: row;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/login.jpg);
+    backdrop-filter: blur(8px);
+    background-size: cover;
+}
+
+/* Testo sulla sinistra */
+.logintext {
+    flex: 1;
+    margin: 3rem;
+    color: var(--whitetext);
+}
+
+.logintext a,
+.logintext a:visited {
+    color: var(--whitetext);
+}
+
+/* Formattazione Form */
+.form_box {
+    background-color: white;
+    box-shadow: 10px 10px 40px -22px rgba(0,0,0,0.75);
+    padding: 1rem;
+    margin: auto;
+    margin-left: 3rem;
+    margin-right: 6rem;
+}
+
+.login_box {
+    width: 30rem;
+}
+
+.user_form {
+    margin: 2rem;
+}
+
+.form_box h1 {
+    text-align: center;
+}
+
+.user_form label {
+    display: inline-block;
+    margin: 0.3rem;
+    vertical-align: top; /* Risolve il problema della data non in linea */
+}
+
+.user_form input {
+    width: 100%;
+    height: 2rem;
+}
+ 
+.user_form .checkbox {
+    display: inline;
+    width: unset;
+    height: unset;
+}
+
+.user_form button{
+    background-color: var(--actions);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+/* Formattazione specifica per la pagina di registrazione */
+
+/* Formattazione "Pulsantoni" */
+#selezioneTipo {
+    flex:1;
+    margin: auto;
+    text-align: center;
+    color: var(--whitetext);
+}
+
+#selezioneTipo i {
+    font-size: 3rem;
+}
+
+#selezioneTipo button {
+    display: block;
+    width: 20rem;
+    height: 10rem;
+    color: var(--accent);
+    background-color: var(--actions);
+    border: none;
+    margin: 3rem auto;
+    font-size: 2rem;
+}
+
+/* Formattazione form registrazione */
+.registra {
+    display: none;
+}
+
+.registra_box {
+    display: none;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: fit-content;
+    padding: 3rem;
+    padding-top: 2rem;
+}
+
+.registra input {
+    display: block;
+    width: 20rem;
+}
+
+.registra fieldset {
+    border: 1px solid lightgray
+}
+
+
