@@ -1,8 +1,4 @@
 <?php
-echo "Utente esiste";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 //Variabili del DB
 define('HOSTNAME', 'localhost');
 define('USERNAME', 'mysql');
@@ -10,7 +6,6 @@ define('PASSWORD', '5582');
 define('DATABASE', 'aziendaselezione');
 define('PORT', '3306');
 
-echo "Utente esiste";
 //Variabili dei campi del form
 $tipo = "";
 $email = "";
@@ -81,8 +76,7 @@ $mysqli = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE, PORT);
 !$mysqli -> connect_errno
     or die("Error: Falied to CONNECT: ({mysqli->connect_errno}) {mysqli->connect_error}");
 
-    echo "Utente esiste";
-// Verifica dell'esistenza dell'utente
+    // Verifica dell'esistenza dell'utente
 $queryVerifica = "SELECT * FROM utenti WHERE username = '$username';";
 
 $resultSet = $mysqli -> query($queryVerifica)
